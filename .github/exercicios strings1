@@ -1,0 +1,20 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma string")
+	scanner.Scan()
+	string := scanner.Text()
+	scanner1 := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite outra string")
+	scanner1.Scan()
+	string1 := scanner1.Text()
+	string2 := string + ", " + string1
+	fmt.Println(string2)
+}
